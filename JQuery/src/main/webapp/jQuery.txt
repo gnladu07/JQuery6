@@ -6,3 +6,5 @@ https://jquery.com/
                    (자바스크립트의 기능(함수)을 모아놓은것)
                    
 https://jquery.com/download/ 페이지에서 다운로드
+
+https://releases.jquery.com/
