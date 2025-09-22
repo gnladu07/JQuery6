@@ -47,9 +47,9 @@
 <body>
 	<h1>test4.jsp</h1>
 	
-	<img src="../img/1.jpg">
-	<img src="../img/2.jpg">
-	<img src="../img/3.jpg">
+	<img src="../img/1_img.webp">
+	<img src="../img/2_img.webp">
+	<img src="../img/3_img.webp">
 	
 	
 	
