@@ -8,3 +8,15 @@ https://jquery.com/
 https://jquery.com/download/ 페이지에서 다운로드
 
 https://releases.jquery.com/
+
+
+<![CDATA[ 내용 ]]>
+<![CDATA[ 스포츠 | JTBC News ]]>
+
+CDATA => (UnParsed) Character DATA
+      => 문자 그대로 해석해서 사용
+
+<![CDATA[ 스포츠 | JTBC News ]]>
+
+=> Parsed Character DATA
+=> 문자를 상황에 맞게 파싱(변경)해서 사용

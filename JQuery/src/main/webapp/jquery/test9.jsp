@@ -85,7 +85,6 @@
 					// console.log(data);
 					// 데이터를 모두 감싸는 태그에 접근
 					$(data).find("person").each(function(){
-						alert("sdasda");
 						var name = $(this).find("name").text();
 						var age = $(this).find("age").text();
 						var gender = $(this).find("gender").text();
@@ -105,14 +104,28 @@
 		// 'https://news-ex.jtbc.co.kr' that is not equal to the supplied origin.
 		
 		// => AJAX CORS(동일한 도메인 주소에 대한 접근 해야함)
+		// => AJAX 실행한 응답 정보가 HTML/XML 일때는 페이지와 같은 도메인에서 전달된 정보만
+		// 사용 가능하다
+		
 		// https://rss2json.com/
 		
-		/* $.ajax({
-			url : "https://news-ex.jtbc.co.kr/v1/get/rss/section/sports",
-			success : function() {
-				alert(" jtbc rss 다녀옴! ");
+		// jtbc rss 데이터를 저장한 XML에서 신문기사 제목과 링크를 가져와서
+		// newsDiv에 출력하기
+		$.ajax({
+			// url : "https://news-ex.jtbc.co.kr/v1/get/rss/section/sports",
+			url : "jtbc.xml",
+			success : function(data) {
+				alert(" jtbc rss(jtbc.xml) 다녀옴! ");
+				$(data).find("item").each(function(){
+					var title = $(this).find("title").text();
+					var link = $(this).find("link").text();
+					
+					// $("#newsDiv").append(title+"<br>");
+					// $("#newsDiv").append(link+"<hr>");
+					$("#newsDiv").append("<a href='"+link+"'>"+title+"</a> <hr>");
+				})
 			}
-		}); */
+		});
 		
 		
 	});
@@ -138,6 +151,14 @@
 		
 		
 	</div>
+	
+	<hr>
+	<div id="newsDiv">
+		<h1> JTBC 뉴스 정보 (제목,링크)</h1>
+		
+		
+	</div>
+	<hr>
 	
 	
 </body>
